@@ -22,59 +22,64 @@ const posts = [
 ];
 
 
-// Snack 1
+describe('Operazioni su array', () => {
 
-test("La funzione getInitials restituisce le iniziali di un nome completo.", () => {
-    expect(getInitials('Luca Cordero')).toBe('LC');
-    expect(getInitials('Luca Cordero Di Montezemolo')).toBe('LCDM')
-})
 
-//  Snack 2
+    //  Snack 3
 
-test("La funzione createSlug restituisce una stringa in lowercase.", () => {
-    expect(createSlug('METAL SLUG')).toBe('metal slug');
-    expect(createSlug('METAL SLUG SlAyEr')).toBe('metal slug slayer');
-})
+    test("La funzione average calcola la media aritmetica di un array di numeri.", () => {
+        expect(average(numbersArr)).toBe(5)
+    })
 
-//  Snack 3
+    // Snack 7
 
-test("La funzione average calcola la media aritmetica di un array di numeri.", () => {
-    expect(average(numbersArr)).toBe(5)
-})
+    test("La funzione findPostById restituisce il post corretto dato l’array di post e l’id", () => {
 
-//  Snack 4
-
-test("La funzione createSlugSplitJoin sostituisce gli spazi con -.", () => {
-    expect(createSlugSplitJoin('metal slug')).toBe('metal-slug');
-    expect(createSlugSplitJoin('la foresta in fondo')).toBe('la-foresta-in-fondo')
-})
-
-// Snack 5
-
-test("La funzione isPalindrome verifica se una stringa è un palindromo.", () => {
-    expect(isPalindrome("i topi nipoti")).toBe(true)
-    expect(isPalindrome("Salas")).toBe(true)
-})
-
-//  Snack 6
-
-test("La funzione createSlugVerify lancia un errore se il titolo è vuoto o non valido.", () => {
-    expect(() => createSlugVerify("")).toThrow('titolo vuoto o non valido');
-    expect(() => createSlugVerify(null)).toThrow('titolo vuoto o non valido')
-
-})
-
-// Snack 7
-
-test("La funzione findPostById restituisce il post corretto dato l’array di post e l’id", () => {
-
-    expect(findPostById(posts, 2)).toEqual({
-        id: 2,
-        title: "Guida alle calette nascoste del Salento",
-        slug: "guida-alle-calette-nascoste-del-salento"
+        expect(findPostById(posts, 2)).toEqual({
+            id: 2,
+            title: "Guida alle calette nascoste del Salento",
+            slug: "guida-alle-calette-nascoste-del-salento"
+        });
     });
-});
+})
 
+describe('Operazioni su stringhe', () => {
+    // Snack 1
+
+    test("La funzione getInitials restituisce le iniziali di un nome completo.", () => {
+        expect(getInitials('Luca Cordero')).toBe('LC');
+        expect(getInitials('Luca Cordero Di Montezemolo')).toBe('LCDM')
+    })
+
+    // Snack 5
+
+    test("La funzione isPalindrome verifica se una stringa è un palindromo.", () => {
+        expect(isPalindrome("i topi nipoti")).toBe(true)
+        expect(isPalindrome("Salas")).toBe(true)
+    })
+})
+
+describe('Operazioni di slug', () => {
+    //  Snack 2
+
+    test("La funzione createSlug restituisce una stringa in lowercase.", () => {
+        expect(createSlug('METAL SLUG')).toBe('metal slug');
+        expect(createSlug('METAL SLUG SlAyEr')).toBe('metal slug slayer');
+    })
+    //  Snack 4
+
+    test("La funzione createSlugSplitJoin sostituisce gli spazi con -.", () => {
+        expect(createSlugSplitJoin('metal slug')).toBe('metal-slug');
+        expect(createSlugSplitJoin('la foresta in fondo')).toBe('la-foresta-in-fondo')
+    })
+    //  Snack 6
+
+    test("La funzione createSlugVerify lancia un errore se il titolo è vuoto o non valido.", () => {
+        expect(() => createSlugVerify("")).toThrow('titolo vuoto o non valido');
+        expect(() => createSlugVerify(null)).toThrow('titolo vuoto o non valido')
+
+    })
+})
 
 
 

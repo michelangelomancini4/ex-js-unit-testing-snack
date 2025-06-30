@@ -36,9 +36,10 @@ function createSlugVerify(title) {
     return title.toLowerCase().replaceAll("", "-");
 }
 
+// snack 7
 function findPostById(posts, id) {
     return posts.find(post => post.id === id);
 }
 
 
-module.exports = { getInitials, createSlug, average, createSlugSplitJoin, isPalindrome, createSlugVerify, findPostById }
+module.exports = { getInitials, createSlug, average, createSlugSplitJoin, isPalindrome, createSlugVerify, findPostById } 
