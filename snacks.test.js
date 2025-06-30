@@ -1,4 +1,4 @@
-const { getInitials, createSlug, average } = require("./snacks");
+const { getInitials, createSlug, average, createSlugSplitJoin } = require("./snacks");
 
 
 const numbersArr = [2, 3, 6, 9];
@@ -22,3 +22,14 @@ test("La funzione createSlug restituisce una stringa in lowercase.", () => {
 test("La funzione average calcola la media aritmetica di un array di numeri.", () => {
     expect(average(numbersArr)).toBe(5)
 })
+
+//  Snack 4
+
+test("La funzione createSlugSplitJoin sostituisce gli spazi con -.", () => {
+    expect(createSlugSplitJoin('metal slug')).toBe('metal-slug');
+    expect(createSlugSplitJoin('la foresta in fondo')).toBe('la-foresta-in-fondo')
+})
+
+
+
+

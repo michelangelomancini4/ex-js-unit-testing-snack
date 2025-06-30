@@ -16,23 +16,18 @@ function average(array) {
     return sum / array.length;
 }
 
+// snack 4
+function createSlugSplitJoin(str) {
+    return str.split(" ").join("-");
+}
 
 
-module.exports = { getInitials, createSlug, average }
+
+module.exports = { getInitials, createSlug, average, createSlugSplitJoin }
 
 
 
 
-
-// 🏆 Snack 4
-// Creare un test che verifichi la seguente descrizione:
-
-// 👉 "La funzione createSlug sostituisce gli spazi con -."
-
-
-// 📌 Esempi:
-
-// createSlug("Questo è un test") → "questo-e-un-test"
 // 🏆 Snack 5
 // Creare un test che verifichi la seguente descrizione:
 
