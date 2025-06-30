@@ -1,15 +1,18 @@
+// snack 1
 function getInitials(fullName) {
     return fullName
         .split(" ")
         .map(word => word[0].toUpperCase())
         .join("");
 };
-module.exports = { getInitials }
 
-// 🏆 Snack 2
-// Creare un test che verifichi la seguente descrizione:
+// snack 2
+function createSlug(fullName) {
+    return fullName.toLowerCase()
+}
+module.exports = { getInitials, createSlug }
 
-// 👉 "La funzione createSlug restituisce una stringa in lowercase."
+
 
 // 🏆 Snack 3
 // Creare un test che verifichi la seguente descrizione:
