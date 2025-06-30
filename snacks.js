@@ -10,14 +10,19 @@ function getInitials(fullName) {
 function createSlug(fullName) {
     return fullName.toLowerCase()
 }
-module.exports = { getInitials, createSlug }
+// snack 3
+function average(array) {
+    const sum = array.reduce((acc, curr) => acc + curr, 0);
+    return sum / array.length;
+}
 
 
 
-// 🏆 Snack 3
-// Creare un test che verifichi la seguente descrizione:
+module.exports = { getInitials, createSlug, average }
 
-// 👉 "La funzione average calcola la media aritmetica di un array di numeri."
+
+
+
 
 // 🏆 Snack 4
 // Creare un test che verifichi la seguente descrizione:
